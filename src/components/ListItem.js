@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ListItem = ({ user, id, setId }) => {
   // console.log(id);
-  const [focused, setFocused] = useState(false);
 
   const selectedItem = (selectedId) => {
     const labels = document.getElementsByTagName("label");
@@ -40,9 +39,7 @@ const ListItem = ({ user, id, setId }) => {
           htmlFor={`check${id}`}
           key={id}
           id={`user${id}`}
-          className={`py-3 ${
-            focused ? "list-item-focused" : "list-item"
-          } my-1 ps-2 rounded h5 row align-items-center`}
+          className={`py-3 list-item my-1 ps-2 rounded h5 row align-items-center`}
         >
           <img
             src={`https://randomuser.me/api/portraits/men/${id}.jpg`}
