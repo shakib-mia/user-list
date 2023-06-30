@@ -12,16 +12,14 @@ const Details = ({ id }) => {
   return (
     <>
       <div
-        className={`mx-0 mt-3 d-none d-lg-block fixed-top w-50 ms-auto px-5 ${id}`}
+        className={`mx-5 mt-3 d-none d-lg-block fixed-top w-50 ms-auto px-5 ${id}`}
       >
-        <div>
-          <h4
-            className="bg-primary py-3 my-2 rounded-top row justify-content-center text-uppercase"
-            style={{ "--bs-bg-opacity": 0.3 }}
-          >
-            Users Details
-          </h4>
-        </div>
+        <h4
+          className="bg-primary d-block py-3 my-2 rounded-top row justify-content-center text-uppercase text-center w-75 mx-auto"
+          style={{ "--bs-bg-opacity": 0.3 }}
+        >
+          Users Details
+        </h4>
         <div
           className="d-flex align-items-center justify-content-center"
           style={{ height: "80vh" }}
@@ -84,17 +82,15 @@ const Details = ({ id }) => {
       </div>
 
       <div
-        className={`mx-0 mt-3 d-block d-lg-none w-100 ms-auto px-5 ${id}`}
+        className={`mx-0 mt-3 d-block d-lg-none ms-auto px-1 ${id}`}
         id="details"
       >
-        <div>
-          <h4
-            className="bg-primary py-3 my-2 rounded-top row justify-content-center text-uppercase"
-            style={{ "--bs-bg-opacity": 0.3 }}
-          >
-            Users Details
-          </h4>
-        </div>
+        <h4
+          className="bg-primary py-3 my-2 rounded-top text-center w-100 text-uppercase"
+          style={{ "--bs-bg-opacity": 0.3 }}
+        >
+          Users Details
+        </h4>
         <div
           className="d-flex align-items-center justify-content-center"
           style={{ height: "80vh" }}

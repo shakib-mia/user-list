@@ -28,7 +28,10 @@ const List = ({ users, setId }) => {
         Users List
       </h4>
       {/* </div> */}
-      <ul className={users.length > 0 ? "list-unstyled" : "text-center"}>
+      <ul
+        className={users.length > 0 ? "list-unstyled" : "text-center"}
+        id="list"
+      >
         {users ? (
           users.length > 0 ? (
             users.map((user, key) => (

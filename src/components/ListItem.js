@@ -3,16 +3,32 @@ import React, { useState } from "react";
 const ListItem = ({ user, id, setId }) => {
   // console.log(id);
   const [focused, setFocused] = useState(false);
+
+  const selectedItem = (selectedId) => {
+    const labels = document.getElementsByTagName("label");
+    // console.log(selectedId);
+    for (const label of labels) {
+      if (label.id === `user${selectedId}`) {
+        console.log(label.id);
+        label.classList.remove("list-item");
+        label.classList.add("list-item-focused");
+      } else {
+        label.classList.remove("list-item-focused");
+        label.classList.add("list-item");
+      }
+    }
+  };
+
   return (
-    <div className="user-container">
+    <div className="user-container" onClick={() => selectedItem(id)}>
       <a
         href="#details"
         className={`text-dark text-decoration-none`}
         onClick={() => {
           setId(id);
         }}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        // onFocus={() => setFocused(true)}
+        // onBlur={() => setFocused(false)}
       >
         <input
           type="radio"

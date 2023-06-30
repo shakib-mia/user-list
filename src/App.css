@@ -3,6 +3,8 @@
   cursor: pointer;
 }
 
+/* .list-item:click */
+
 .list-item-focused {
   background-color: #d4d4d4;
   cursor: pointer;
